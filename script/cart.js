@@ -120,8 +120,8 @@ function plusQtty(index) {
 };
 
 function minusQtty(index) {
-  if (cart[index].qtty == 1) {//ako ima tacno jedan artikl
-    cart.splice(index, 1);//obrisi taj artikl
+  if (cart[index].qtty == 1) {
+    cart.splice(index, 1);
   } else {
     cart[index].qtty--;
   }
@@ -137,7 +137,7 @@ function deleteItems(index){
 }
 let totalAmount = 0;
 function totalCart() {
-  // let totalAmount = 0;
+  let totalAmount = 0;
   for (let item of cart) {
     totalAmount += item.price * item.qtty;
   }
