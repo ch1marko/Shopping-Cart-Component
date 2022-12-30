@@ -148,12 +148,12 @@ let purchase = document.getElementById("btn-purchase");
 purchase.addEventListener("click", buyProduct);
 function buyProduct(index){
   if(totalAmount <= 0){
-    alert("CART EMPTY");
+    alert("CART EMPTY! PLEASE CHOOSE A PRODUCT.");
     setTimeout(function(){
       window.location.reload();
    }, 1000);
   }else{
-    alert("PURCHASE SUCCESSFUL");
+    alert("PURCHASE SUCCESSFUL!");
     setTimeout(function(){
       window.location.reload();
    }, 1000);
