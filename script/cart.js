@@ -120,8 +120,8 @@ function plusQtty(index) {
 };
 
 function minusQtty(index) {
-  if (cart[index].qtty == 1) {
-    cart.splice(index, 1);
+  if (cart[index].qtty == 1) {//ako ima tacno jedan artikl
+    cart.splice(index, 1);//obrisi taj artikl
   } else {
     cart[index].qtty--;
   }
@@ -135,11 +135,11 @@ function deleteItems(index){
   createRows();
   totalCart();
 }
-let totalAmount = 0;
+// let totalAmount = 0;
 function totalCart() {
   let totalAmount = 0;
   for (let item of cart) {
-    totalAmount += item.price * item.qtty;
+    totalAmount = item.price * item.qtty;
   }
   document.getElementById("price").innerHTML = currencyFormater.format(totalAmount);
 };
@@ -147,8 +147,8 @@ function totalCart() {
 let purchase = document.getElementById("btn-purchase");
 purchase.addEventListener("click", buyProduct);
 function buyProduct(index){
-  if(totalAmount <= 0){
-    alert("CART EMPTY! PLEASE CHOOSE A PRODUCT.");
+  if(cart <= 0){
+    alert("CART EMPTY! PLEASE ADD A PRODUCT.");
     setTimeout(function(){
       window.location.reload();
    }, 1000);
@@ -158,6 +158,6 @@ function buyProduct(index){
       window.location.reload();
    }, 1000);
   }
-};
+}
 
 
