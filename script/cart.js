@@ -153,12 +153,11 @@ function buyProduct(index){
       window.location.reload();
    }, 1000);
   }else{
-    alert("PUCHASE SUCCESSFUL");
+    alert("PURCHASE SUCCESSFUL");
     setTimeout(function(){
       window.location.reload();
    }, 1000);
   }
-  totalCart();
-}
+};
 
 
