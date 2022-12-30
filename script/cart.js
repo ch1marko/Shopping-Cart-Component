@@ -151,12 +151,12 @@ function buyProduct(index){
     alert("CART EMPTY! PLEASE ADD A PRODUCT.");
     setTimeout(function(){
       window.location.reload();
-   }, 1000);
+   }, 500);
   }else{
     alert("PURCHASE SUCCESSFUL!");
     setTimeout(function(){
       window.location.reload();
-   }, 1000);
+   }, 500);
   }
 }
 
