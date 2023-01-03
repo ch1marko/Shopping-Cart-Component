@@ -124,7 +124,7 @@ function minusQtty(index) {
     cart.splice(index, 1);//obrisi taj artikl
   } else {
     cart[index].qtty--;
-  }
+  }     
   createRows();
   totalCart();
 };
@@ -139,9 +139,9 @@ function deleteItems(index){
 function totalCart() {
   let totalAmount = 0;
   for (let item of cart) {
-    totalAmount = item.price * item.qtty;
+    totalAmount += item.price * item.qtty;
   }
-  document.getElementById("price").innerHTML = currencyFormater.format(totalAmount);
+  document.getElementById("price").innerHTML  = currencyFormater.format(totalAmount);
 };
 
 let purchase = document.getElementById("btn-purchase");
