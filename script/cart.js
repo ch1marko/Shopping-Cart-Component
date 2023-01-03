@@ -120,8 +120,8 @@ function plusQtty(index) {
 };
 
 function minusQtty(index) {
-  if (cart[index].qtty == 1) {//ako ima tacno jedan artikl
-    cart.splice(index, 1);//obrisi taj artikl
+  if (cart[index].qtty == 1) {
+    cart.splice(index, 1);
   } else {
     cart[index].qtty--;
   }     
